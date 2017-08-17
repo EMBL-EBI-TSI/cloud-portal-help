@@ -1,3 +1,22 @@
+#!/bin/sh
+end_point=${1:-dev}
+
+case "$end_point" in
+"dev")
+    END_POINT="https://dev.api.portal.tsi.ebi.ac.uk"
+    ;;
+"master")
+    END_POINT="https://api.portal.tsi.ebi.ac.uk"
+    ;;
+"localhost")
+    END_POINT="http://localhost:8080"
+    ;;
+*)
+    echo "Accepted arguments: \`dev\`, \`master\`, or \`loacalhost\`"
+    exit
+    ;;
+esac
+
 echo "Please enter your jwt token: "
 read -sr PORTAL_JWT
 PORTAL_JWT=$PORTAL_JWT
@@ -12,10 +31,14 @@ DEPLOYMENET_ID=$DEPLOYMENET_ID
 echo 'DEPLOYMENET_ID= '${DEPLOYMENET_ID}
 echo ''
 
-curl -H "Authorization: Bearer  ${PORTAL_JWT}" \
-'https://dev.api.portal.tsi.ebi.ac.uk/deployment/'${DEPLOYMENET_ID}'/stop' -X PUT
-echo ''
+echo "Contacting the end point:" ${END_POINT}
 
 curl -H "Authorization: Bearer  ${PORTAL_JWT}" \
-'https://dev.api.portal.tsi.ebi.ac.uk/deployment/'${DEPLOYMENET_ID} -X DELETE
+${END_POINT}'/deployment/'${DEPLOYMENET_ID}/stop -X PUT
+echo ''
+
+sleep 10
+
+curl -H "Authorization: Bearer  ${PORTAL_JWT}" \
+${END_POINT}'/deployment/'${DEPLOYMENET_ID} -X DELETE
 echo ''
