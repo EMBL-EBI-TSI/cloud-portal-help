@@ -19,3 +19,5 @@ The use is self explicative, it can contact one of the `dev`, `master` or `local
 ```
 
 It requires only the ID of the deployment and the `jwt` authentication token (See `API_calls.md` for how to obtain it).  
+
+- `kibana.md` contains information about the TSI kibana endpoint.  
