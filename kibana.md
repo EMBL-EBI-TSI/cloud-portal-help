@@ -17,10 +17,18 @@ Each portal deployment is identified by a timestamp in milliseconds, following t
 It is simple to convert time stamps human readable date.  
 This information can be used to restrict the `time range` of the Kibana's queries.
 
-Bash command:
+Bash command BSD/Mac Os:
 
 ```
 timestamp=tsi1502803354196
 date -r ${timestamp:3:10}
 ```
 ` Tue 15 Aug 2017 14:22:34 BST`
+
+
+Bash command Linux:
+
+```
+timestamp=tsi1502803354196
+date -d @${timestamp:3:10}
+```
