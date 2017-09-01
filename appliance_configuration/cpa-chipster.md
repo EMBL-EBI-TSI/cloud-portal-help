@@ -19,3 +19,12 @@ floatingip_pool		| `ext-net`
 key_name		| `demo-key`
 machine_type		| `s1.huge`
 disk_image		| `chipster`
+
+## OpenStack (extcloud06)
+
+Key | Value
+--- | :---
+net			| `TSI-network`
+floatingip_pool         | `ext-net-37`
+machine_type		| `s1.huge`
+disk_image		| `chipster`
