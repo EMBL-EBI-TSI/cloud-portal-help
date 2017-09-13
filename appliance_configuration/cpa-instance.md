@@ -18,3 +18,13 @@ disk_image	| `ubuntu-16.04`
 network_name	| `test_network`
 floatingip_pool	| `ext-net`
 machine_type	| `s1.nano`
+
+
+## OpenStack (extcloud06)
+
+Key | Value
+--- | :---
+disk_image	| `ubuntu-16.04`
+network_name	| `TSI-network`
+floatingip_pool	| `ext-net-37`
+machine_type	| `s1.nano`
