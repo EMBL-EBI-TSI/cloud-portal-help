@@ -13,11 +13,10 @@
 
 - `deploy.sh` is a bash script that can be used for destroy failed cloud portal deployment.  
 The use is self explicative, it can contact one of the `dev`, `master` or `localhost` endpoints, adding one of the previous word as argument (or without any argument it will try to stop & destroy a deployment in `dev`):  
-
-```
-./destroy.sh [dev/master/localhost]
-```
-
+`. destroy.sh [dev/master/localhost]`  
+or:  
+`source destroy.sh [dev/master/localhost]`  
 It requires only the ID of the deployment and the `jwt` authentication token (See `API_calls.md` for how to obtain it).  
+The `jwt` token, can be also defined as an environment variable named `jwt`, and it will not be required by the script.
 
 - `kibana.md` contains information about the TSI kibana endpoint.  
