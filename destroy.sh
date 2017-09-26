@@ -17,12 +17,20 @@ case "$end_point" in
     ;;
 esac
 
-echo "Please enter your jwt token: "
-read -sr PORTAL_JWT
-PORTAL_JWT=$PORTAL_JWT
+if [ -n "$jwt" ]
+then
+  PORTAL_JWT=$jwt
+  echo 'PORTAL_JWT= '${PORTAL_JWT}
+  echo ''
+else
 
-echo 'PORTAL_JWT= '${PORTAL_JWT}
-echo ''
+  echo "Please enter your jwt token: "
+  read -sr PORTAL_JWT
+  PORTAL_JWT=$PORTAL_JWT
+
+  echo 'PORTAL_JWT= '${PORTAL_JWT}
+  echo ''
+fi
 
 echo "Please enter the ID of the deployment: "
 read -sr DEPLOYMENET_ID
