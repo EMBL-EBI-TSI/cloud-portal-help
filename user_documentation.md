@@ -20,8 +20,8 @@ A minimal Profile set up include this steps:
 
 Each cloud provider requires a set of **cloud credentials**.  
 **Personal credentials** can be set up following the instructions for the specific cloud provider.  
-It also possible to use **shared credentials**, in this case the values will not be visible or editable.  
- 
+It also possible to use **shared credentials**, in this case the values will not be visible or editable.
+
 ### Amazon Web Service (AWS)
 Add your `Cloud Credentials` in this form:
 
@@ -30,7 +30,8 @@ Key|Value
 `TF_VAR_access_key`|`your_access-key`
 `TF_VAR_secret_key`|`your_secret_key`
 
-You can find this information (or create a new one) in you AWS user page under the section:  
+You can find this information (or create a new one) in you AWS user page under the section:
+
 `IAM` ---> `USERS`
 
 ### Azure
@@ -87,7 +88,7 @@ To make the process more straightforward, it is documented here:
 4. Clicking `Create` will download your `credentials`.
 
 Once you have your credentials you can add them to `Cloud Credentials` in this form:
-    
+
  Key|Value
 |---|---|
 |`GOOGLE_CREDENTIALS`| `{ "type":"service_account", "project_id":"", "private_key_id":"", "private_key":"-----BEGIN PRIVATE KEY-----", "client_email": "", "client_id":"", "auth_uri":"", "token_uri":"", "auth_provider_x509_cert_url":"", "client_x509_cert_url":""}`
@@ -117,10 +118,23 @@ Specify a new configuration is very easy:
  - choose one of the `Deployment parameters` that you have previously defined,
  - (optionally) add a public ssh key
 
-## Inputs
+# Inputs
 
 `Inputs` parameters represent a set of parameters that are meant to more volatile than the `Deployment paramenters` or just can not be determined in advance.  
 They are related to the specific application, and to the cloud provider and eventually.  
 They are expressed in the documentation page of the git repository of the same appliance.
 
 You can also avoid to type the inputs and it will use the defaults (but avoid to click with mouse on them, otherwise it will see as a void instead the default).
+
+# Add a new Application Repository
+
+Adding a new Application is extremely simple you just need to know the URL of the git repository,for example you can add this address: `https://github.com/EMBL-EBI-TSI/cpa-instance`
+
+- From the global menu click [`Application Repository`](https://portal.tsi.ebi.ac.uk/repository)
+- click on the `+`  button
+- enter the `URL` of the git repository
+
+## Repository compliance
+
+The `EMBL-EBI Cloud Portal` requires the presence of well-formed `manifest.json` file, in the `root directory` of each git repository to be considered compliant, and therefore been accepted as a new application.  
+The `manifest.json` file contains simple data structures, that expose the application details to the `EMBL-EBI Cloud Portal`.
