@@ -20,3 +20,5 @@ It requires only the ID of the deployment and the `jwt` authentication token (Se
 The `jwt` token, can be also defined as an environment variable named `jwt`, and it will not be required by the script.
 
 - `kibana.md` contains information about the TSI kibana endpoint.  
+
+- `securing_credentials.md` provides a way to secure git public repositories from credential leaks.  
