@@ -25,10 +25,10 @@ It also possible to use **shared credentials**, in this case the values will not
 ### Amazon Web Service (AWS)
 Add your `Cloud Credentials` in this form:
 
-Key|Value
+|Key|Value|
 |---|---|
-`TF_VAR_access_key`|`your_access-key`
-`TF_VAR_secret_key`|`your_secret_key`
+|`TF_VAR_access_key`|`your_access-key`|
+|`TF_VAR_secret_key`|`your_secret_key`|
 
 You can find this information (or create a new one) in you AWS user page under the section:
 
@@ -37,13 +37,13 @@ You can find this information (or create a new one) in you AWS user page under t
 ### Azure
 Add your `Cloud Credentials` in this form:
 
-Key|Value
+|Key|Value|
 |---|---|
-`ARM_SUBSCRIPTION_ID `|`YOUR_SUBSCRIPTION_ID`
-`ARM_CLIENT_ID `|`YOUR_CLIENT_ID`
-`ARM_CLIENT_SECRET `|`YOUR_CLIENT_SECRET`
-`ARM_TENANT_ID `|`YOUR_TENANT_ID`
-`ARM_ENVIRONMENT `|`public`
+|`ARM_SUBSCRIPTION_ID `|`YOUR_SUBSCRIPTION_ID`|
+|`ARM_CLIENT_ID `|`YOUR_CLIENT_ID`|
+|`ARM_CLIENT_SECRET `|`YOUR_CLIENT_SECRET`|
+|`ARM_TENANT_ID `|`YOUR_TENANT_ID`|
+|`ARM_ENVIRONMENT `|`public`|
 
 In order to use Terraform with Azure is required to create a `Service Principal` via the Azure portal.  
 Terraform documentation provide an extensive explanation that you can find [here](https://www.terraform.io/docs/providers/azurerm/authenticating_via_service_principal.html#creating-a-service-principal-in-the-azure-portal).
@@ -51,16 +51,16 @@ Terraform documentation provide an extensive explanation that you can find [here
 ### OpenStack
 Add your `Cloud Credentials` in this form:
 
-Key|Value
+|Key|Value|
 |---|---|
-`OS_AUTH_URL`|`https://extcloud06.ebi.ac.uk:13000/v3`
-`OS_USERNAME`|`your_username`
-`OS_PASSWORD`|`your_password`
-`OS_PROJECT_ID`|`your_project_id `
-`OS_PROJECT_NAME`|`EBI-TSI`
-`OS_USER_DOMAIN_NAME`|`Default`
-`OS_INTERFACE`|`public`
-`OS_IDENTITY_API_VERSION`|`3`
+|`OS_AUTH_URL`|`https://extcloud06.ebi.ac.uk:13000/v3`|
+|`OS_USERNAME`|`your_username`|
+|`OS_PASSWORD`|`your_password`|
+|`OS_PROJECT_ID`|`your_project_id `|
+|`OS_PROJECT_NAME`|`EBI-TSI`|
+|`OS_USER_DOMAIN_NAME`|`Default`|
+|`OS_INTERFACE`|`public`|
+|`OS_IDENTITY_API_VERSION`|`3`|
 
 The specific values for your OpenStack provider are contained in the `OpenStack RC file`, which is project-specific and contains the credentials used by OpenStack Compute, Image, and Identity services.
 
@@ -89,9 +89,9 @@ To make the process more straightforward, it is documented here:
 
 Once you have your credentials you can add them to `Cloud Credentials` in this form:
 
- Key|Value
+| Key|Value|
 |---|---|
-|`GOOGLE_CREDENTIALS`| `{ "type":"service_account", "project_id":"", "private_key_id":"", "private_key":"-----BEGIN PRIVATE KEY-----", "client_email": "", "client_id":"", "auth_uri":"", "token_uri":"", "auth_provider_x509_cert_url":"", "client_x509_cert_url":""}`
+|`GOOGLE_CREDENTIALS`| `{ "type":"service_account", "project_id":"", "private_key_id":"", "private_key":"-----BEGIN PRIVATE KEY-----", "client_email": "", "client_id":"", "auth_uri":"", "token_uri":"", "auth_provider_x509_cert_url":"", "client_x509_cert_url":""}`|
 
 
 ## Deployment parameters
