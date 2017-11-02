@@ -2,7 +2,7 @@
 
 The EMBL-EBI Cloud Portal is offered as a service to ELIXIR and other communities.  
 Users will need a freely available [ELIXIR identity](https://www.elixir-europe.org/services/compute/aai) to access the portal.  
-Obtain your ELIXIR identity [here](https://www.elixir-europe.org/register). The you can [login](https://portal.tsi.ebi.ac.uk/welcome/login).
+Obtain your ELIXIR identity [here](https://www.elixir-europe.org/register). Then you can [login](https://portal.tsi.ebi.ac.uk/welcome/login).
 
 
 # Set up the cloud [`Profile`](https://portal.tsi.ebi.ac.uk/profile)

@@ -80,26 +80,24 @@ We suggest to set up a second layer protection with a CI task for detect acciden
 
 This Jenkins job [https://ci.tsi.ebi.ac.uk/job/app-testing/job/secret-check/](https://ci.tsi.ebi.ac.uk/job/app-testing/job/secret-check/) can be use as a template:
 
-1. Define a `GitHub project`-`Project url`, under `General` i.e.:
+- Define a `GitHub project`-`Project url`, under `General` i.e.:
+```
+        https://github.com/EMBL-EBI-TSI/cpa-instance/
+```
 
-    ```
-    https://github.com/EMBL-EBI-TSI/cpa-instance/
-    ```
-2. Specify the same URL under: `Source Code Management`-`Git`-`Repositories`-`Repository URL`
+- Specify the same URL under: `Source Code Management`-`Git`-`Repositories`-`Repository URL`
 
-3. Flag `GitHub hook trigger for GITScm polling` under `Build Triggers`.
-4. Flag `Delete workspace before build starts` under `Build Environment `.
-5. Under `Build`-`Execute shell`-`Command`
-
-   ```
-   git secrets --install
-   # Add support for AWS secret scan
-   git secrets --register-aws
-   # Scan the latest git push
-   git secrets --scan
-   if [ $? -eq 0 ]; then
-       echo "git secrets --scan OK"
-   else
-   echo "git secrets --scan FAIL"
-   ```
-
+- Flag `GitHub hook trigger for GITScm polling` under `Build Triggers`.
+- Flag `Delete workspace before build starts` under `Build Environment `.
+- Under `Build`-`Execute shell`-`Command`
+```
+    git secrets --install
+    # Add support for AWS secret scan
+    git secrets --register-aws
+    # Scan the latest git push
+    git secrets --scan
+    if [ $? -eq 0 ]; then
+        echo "git secrets --scan OK"
+    else
+    echo "git secrets --scan FAIL"
+```
