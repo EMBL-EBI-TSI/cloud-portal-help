@@ -1,4 +1,4 @@
-# Developer tools and documentation for the cloud-portal
+# Developer tools and internal documentation for the EMBL-EBI Cloud Portal
 
 - `appliance_configuration` directory contains the input and parameter configurations to deploy some of the portal appliance, using the Embassy TSI OpenStack tenancies.
 
@@ -21,4 +21,4 @@ The `jwt` token, can be also defined as an environment variable named `jwt`, and
 
 - `kibana.md` contains information about the TSI kibana endpoint.  
 
-- `securing_credentials.md` provides a way to secure git public repositories from credential leaks.  
+Public documentation for the EMBL-EBI Cloud portal available [here](https://readthedocs.org/projects/embl-ebi-cloud-portal-documentation)
