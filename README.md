@@ -6,6 +6,7 @@
 |---|
 |cpa-chipster|
 |cpa-docker-container|
+|cpa-docker-galaxy|
 |cpa-instance|
 |cpa-monitoring|
 
