@@ -35,52 +35,31 @@ Or also including parameters `chipster embassy`:
 
 ## Stop and Destroy a deployment
 
-### Portal Dev
-
 - Stop
 
 ```
 curl -H "Authorization: Bearer  $(cat jwt)" \
-'https://dev.api.portal.tsi.ebi.ac.uk/deployment/TSI1478180421019/stop' -X PUT
+'$baseUrl/deployment/TSI1478180421019/stop' -X PUT
+```
+
+- Stop itself
+
+```
+curl "$baseUrl/deployment/TSI1478180421019/stopme" -X PUT \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -d "{ \"secret\" : \"$PORTAL_STOP_ME_SECRET\" }"
 ```
 
 - Destroy
 
 ```
 curl -H "Authorization: Bearer  $(cat jwt)" \
-'https://dev.api.portal.tsi.ebi.ac.uk/deployment/TSI1457613148123' -X DELETE
+'$baseUrl/deployment/TSI1457613148123' -X DELETE
 ```
 
-### Portal Master
+where `baseUrl` should be:
 
-- Stop
+* Portal Dev       => https://dev.api.portal.tsi.ebi.ac.uk
+* Portal Master    => https://api.portal.tsi.ebi.ac.uk
+* Local Deployment => http://localhost:8080
 
-```
-curl -H "Authorization: Bearer  $(cat jwt)" \
-'https://api.portal.tsi.ebi.ac.uk/deployment/TSI1478180421019/stop' -X PUT
-```
-
-- Destroy
-
-
-```
-curl -H "Authorization: Bearer  $(cat jwt)" \
-'https://api.portal.tsi.ebi.ac.uk/deployment/TSI1457613148123' -X DELETE
-```
-
-### Local Deployment
-
-- Stop
-
-```
-curl -H "Authorization: Bearer  $(cat jwt)" \
-'http://localhost:8080/deployment/TSI1479736348408/stop' -X PUT
-```
-
-- Destroy
-
-
-```
-curl -H "Authorization: Bearer  $(cat jwt)" \
-'http://localhost:8080/deployment/TSI1479292865687' -X DELETE
-```
