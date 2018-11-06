@@ -47,7 +47,7 @@ curl -H "Authorization: Bearer  $(cat jwt)" \
 ```
 curl "$baseUrl/deployment/TSI1478180421019/stopme" -X PUT \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -d "{ \"secret\" : \"$PORTAL_STOP_ME_SECRET\" }"
+    -d "{ \"secret\" : \"$PORTAL_CALLBACK_SECRET\" }"
 ```
 
 - Destroy
