@@ -39,13 +39,13 @@ Or also including parameters `chipster embassy`:
 
 ```
 curl -H "Authorization: Bearer  $(cat jwt)" \
-'$baseUrl/deployment/TSI1478180421019/stop' -X PUT
+'$PORTAL_BASE_URL/deployment/TSI1478180421019/stop' -X PUT
 ```
 
 - Stop itself
 
 ```
-curl "$baseUrl/deployment/TSI1478180421019/stopme" -X PUT \
+curl "$PORTAL_BASE_URL/deployment/TSI1478180421019/stopme" -X PUT \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d "{ \"secret\" : \"$PORTAL_CALLBACK_SECRET\" }"
 ```
@@ -54,10 +54,10 @@ curl "$baseUrl/deployment/TSI1478180421019/stopme" -X PUT \
 
 ```
 curl -H "Authorization: Bearer  $(cat jwt)" \
-'$baseUrl/deployment/TSI1457613148123' -X DELETE
+'$PORTAL_BASE_URL/deployment/TSI1457613148123' -X DELETE
 ```
 
-where `baseUrl` should be:
+`PORTAL_BASE_URL` will be:
 
 * Portal Dev       => https://dev.api.portal.tsi.ebi.ac.uk
 * Portal Master    => https://api.portal.tsi.ebi.ac.uk
