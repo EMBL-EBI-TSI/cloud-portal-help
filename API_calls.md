@@ -45,7 +45,7 @@ curl -H "Authorization: Bearer  $(cat jwt)" \
 - Stop itself
 
 ```
-curl "$PORTAL_BASE_URL/deployment/TSI1478180421019/stopme" -X PUT \
+curl -v "$PORTAL_BASE_URL/deployment/TSI1478180421019/stopme" -X PUT \
      -H "Deployment-Secret: $PORTAL_CALLBACK_SECRET"
 ```
 
