@@ -1,3 +1,6 @@
+> **Note**
+> The EBI Cloud Portal has been retired and its code base is no longer updated. If you would like to contact the Cloud Portal authors, please leave us feedback via [the EBI contact form](https://www.ebi.ac.uk/about/contact/support/other) mentioning the EBI Cloud Portal in the Subject.
+
 # Developer tools and internal documentation for the EMBL-EBI Cloud Portal
 
 - `appliance_configuration` directory contains the input and parameter configurations to deploy some of the portal appliance, using the Embassy TSI OpenStack tenancies.
